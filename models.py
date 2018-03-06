@@ -71,7 +71,7 @@ class Product(Base):
             'user_id': self.user_id
         }
 
-engine = create_engine('sqlite:///catalog.db')
+engine = create_engine('postgresql://catalog:password1@127.0.0.1:5432/catalogDB')
 
 
 Base.metadata.create_all(engine)
