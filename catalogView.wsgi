@@ -1,5 +1,8 @@
 import sys
+path = '/var/www/html/catalogApp'
+if path not in sys.path:
+    sys.path.append(path)
 
-sys.path.append('/var/www/html/catalogApp')
+import models
 
 from catalogView import app as application

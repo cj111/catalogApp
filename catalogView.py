@@ -30,9 +30,12 @@ __version__ = "1.0"
 
 
 app = Flask(__name__)
+app.secret_key = 'super_secret_key'
+
+APP_PATH = '/var/www/html/catalogApp/'
 
 CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
+    open(APP_PATH + 'client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = "Catalog Application"
 
 
@@ -403,6 +406,5 @@ def deleteProduct(category_id, product_id):
 
 
 if __name__ == '__main__':
-    app.secret_key = 'super_secret_key'
     app.debug = True
     app.run(host='0.0.0.0', port=80)
