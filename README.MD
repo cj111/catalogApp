@@ -20,11 +20,11 @@ Software installed:
 Configurations made: 
 
 1. Update all currently installed packages: 
-	a_ sudo apt-get update 
-	b_ sudo apt-get upgrade 
+	<br/>a. sudo apt-get update 
+	<br/> sudo apt-get upgrade 
 2. Change the SSH port from 22 to: 
-	a_ Use `sudo vim /etc/ssh/sshd_config` and then change Port 22 to Port 2200 , save & quit. 
-	b_ Reload SSH using `sudo service ssh restart` 
+	a. Use `sudo vim /etc/ssh/sshd_config` and then change Port 22 to Port 2200 , save & quit. 
+	b. Reload SSH using `sudo service ssh restart` 
 3. Configured UFW to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123) 
 	a. sudo ufw allow 2200 
 	b. sudo ufw allow 80 
